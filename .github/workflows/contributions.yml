@@ -29,14 +29,16 @@ jobs:
           GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
           PROFILE_OWNER: ${{ github.repository_owner }}
         run: python3 scripts/contribution_stats.py
-      - name: Generate blue contribution snake
+      - name: Generate vibrant neon contribution snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.PROFILE_TOKEN }}
           outputs: |
-            assets/github-snake.svg?color_snake=#0284c7&color_dots=#eff6ff,#dbeafe,#93c5fd,#60a5fa,#2563eb
-            assets/github-snake-dark.svg?palette=github-dark&color_snake=#7dd3fc&color_dots=#12243a,#173e5e,#24618a,#38a2cc,#7dd3fc
+            assets/github-snake.svg?color_snake=#ff0055&color_dots=#ebedf0,#93c5fd,#818cf8,#c084fc,#f43f5e
+            assets/github-snake-dark.svg?color_snake=#00f5d4&color_dots=#161b22,#312e81,#4f46e5,#9333ea,#ec4899
+      - name: Enhance snake neon glow effects
+        run: python3 scripts/enhance_snake.py
       - name: Save updated artwork
         env:
           PROFILE_BRANCH: ${{ github.event.repository.default_branch }}

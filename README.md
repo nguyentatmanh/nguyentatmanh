@@ -94,11 +94,19 @@ My goal is to grow as a **Backend & AI Engineer**, with a focus on clean code, r
 
 ## 🐍 My contribution playground
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="assets/github-snake.svg" />
-  <img src="assets/github-snake.svg" width="100%" alt="A blue snake moving through my GitHub contribution graph" />
-</picture>
+<p align="center">
+  <img src="https://img.shields.io/badge/Arcade%20Game-Snake%20Eater-ff007f?style=for-the-badge" alt="Arcade Game" />
+  <img src="https://img.shields.io/badge/Mode-Auto%20Play-06b6d4?style=for-the-badge" alt="Auto Play" />
+  <img src="https://img.shields.io/badge/Theme-Cyberpunk%20Neon-8b5cf6?style=for-the-badge" alt="Cyberpunk Neon" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="assets/github-snake.svg" />
+    <img src="assets/github-snake.svg" width="100%" alt="A vibrant neon snake moving through my GitHub contribution graph" />
+  </picture>
+</p>
 
 <p align="center">
   <img src="assets/contribution-stats.svg" width="100%" alt="My contribution statistics over the past year" />
