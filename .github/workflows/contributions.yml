@@ -1,0 +1,50 @@
+name: Update contribution playground
+
+on:
+  schedule:
+    - cron: '17 0 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/contributions.yml'
+      - 'scripts/contribution_stats.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-contributions
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - name: Fetch and validate owner contribution data
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
+          PROFILE_OWNER: ${{ github.repository_owner }}
+        run: python3 scripts/contribution_stats.py
+      - name: Generate blue contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.PROFILE_TOKEN }}
+          outputs: |
+            assets/github-snake.svg?color_snake=#0284c7&color_dots=#eff6ff,#dbeafe,#93c5fd,#60a5fa,#2563eb
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=#7dd3fc&color_dots=#12243a,#173e5e,#24618a,#38a2cc,#7dd3fc
+      - name: Save updated artwork
+        env:
+          PROFILE_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/github-snake.svg assets/github-snake-dark.svg assets/contribution-stats.svg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update contribution artwork'
+            git push origin "HEAD:$PROFILE_BRANCH"
+          fi
