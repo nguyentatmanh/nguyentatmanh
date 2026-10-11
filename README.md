@@ -31,6 +31,8 @@ My goal is to grow as a **Backend & AI Engineer**, with a focus on clean code, r
 | :--- | :--- |
 | 📚 Field of study | Computer Science |
 | 🎂 Birthday | September 19, 2005 |
+| 📍 Current location | Hanoi, Vietnam |
+| 🏡 Hometown | Nghe An, Vietnam |
 | 🔎 Interests | Backend systems, AI, NLP, computer vision, and multi-agent RAG |
 | 💡 Learning approach | Explore, experiment, build, and improve |
 
