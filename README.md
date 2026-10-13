@@ -47,7 +47,6 @@ My goal is to grow as a **Backend & AI Engineer**, with a focus on clean code, r
   <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&amp;logo=javascript&amp;logoColor=F7DF1E" alt="JavaScript" />
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/SQL-4267B2?style=for-the-badge" alt="SQL" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&amp;logo=gnubash&amp;logoColor=white" alt="Bash" />
 </p>
 
 ### Backend, Web & Mobile
@@ -108,11 +107,6 @@ My goal is to grow as a **Backend & AI Engineer**, with a focus on clean code, r
   </picture>
 </p>
 
-<p align="center">
-  <img src="assets/contribution-stats.svg" width="100%" alt="My contribution statistics over the past year" />
-</p>
-
-A daily snapshot of my GitHub contribution activity, including private activity visible to my authenticated account. Contributions include commits, pull requests, issues, and reviews counted by GitHub.
 
 ## 🤝 Let's connect
 
